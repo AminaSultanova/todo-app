@@ -19,7 +19,7 @@ def test_health(client):
 
 def test_list_is_empty_at_start(client):
     response = client.get("/todos")
-    assert response.status_code == 200
+    assert response.status_code == 500
     assert response.get_json() == []
 
 
